@@ -6,10 +6,17 @@ import { suit, values } from "./cards";
 
 const showCard = (randomSuit, randomValue) => {
   const card = document.querySelector("#card");
+
+  if (randomSuit == "♥" || randomSuit == "♦") {
+  }
   card.innerHTML = `
-        <div>${randomSuit}</div>
-        <div>${randomValue}</div>
-        <div>${randomSuit}</div>`;
+        <div class='${
+          randomSuit == "♥" || randomSuit == "♦" ? "suitRed" : ""
+        } suit'>${randomSuit}</div>
+        <div class="value-card">${randomValue}</div>
+        <div class='${
+          randomSuit == "♥" || randomSuit == "♦" ? "suitRed" : ""
+        } suit'>${randomSuit}</div>`;
 };
 
 const generateRandomCard = () => {
@@ -18,11 +25,19 @@ const generateRandomCard = () => {
   showCard(randomSuit, randomValue);
 };
 
-window.onload = function() {
-  //write your code here
-  generateRandomCard();
+const generateCardByTime = () => {
+  setInterval(() => generateRandomCard(), 10000);
+};
 
+const generateCardByClick = () => {
   document
     .querySelector("#btn-newCard")
     .addEventListener("click", () => generateRandomCard());
+};
+
+window.onload = function() {
+  //write your code here
+  generateRandomCard();
+  generateCardByClick();
+  generateCardByTime();
 };
