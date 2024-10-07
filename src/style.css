@@ -1,1 +1,11 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+body {
+  background-color: green;
+}
+#card {
+  background-color: aliceblue;
+  width: 450px;
+  height: 800px;
+  border-radius: 20px;
+  margin: 20px auto;
+}
