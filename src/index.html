@@ -13,21 +13,25 @@
     <link rel="shortcut icon" href="./4geeks.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://fonts.cdnfonts.com/css/card-characters"
+      rel="stylesheet"
     />
   </head>
   <body>
     <div id="container" class="text-center row">
       <div id="options" class="col-6">
+        <img src="./assets/img/rigo-baby.jpg" alt="">
+        <h1 class="mb-5">Random Card</h1>
         <div>
-          <h1 class="text-white mb-5 fs-2">Customize your card</h1>
-          <div class="mb-5 d-flex justify-content-between">
+          <h2 class="text-white mb-5 fs-2">Personaliza Tu Carta</h1>
+          <hr />
+          <div class="mb-5 d-flex justify-content-between align-items-center">
             <label class="" for="input-width"
               ><i class="bi bi-arrows"></i
             ></label>
@@ -35,10 +39,10 @@
               type="text"
               name="width"
               id="input-width"
-              placeholder="Select card width"
+              placeholder="Ancho"
             />
           </div>
-          <div class="mb-5 d-flex justify-content-between">
+          <div class="mb-5 d-flex justify-content-between align-items-center">
             <label for="input-height">
               <i class="bi bi-arrows-vertical"></i>
             </label>
@@ -46,7 +50,7 @@
               type="text"
               name="width"
               id="input-height"
-              placeholder="Select card height"
+              placeholder="Alto"
             />
           </div>
           <button id="btn-newCard" class="mb-2">
@@ -55,9 +59,9 @@
         </div>
       </div>
       <div id="card" class="col-6">
-        <div class="suit">♥</div>
+        <!-- <div class="suit">♥</div>
         <div class="value-card">2</div>
-        <div class="suit">♥</div>
+        <div class="suit">♥</div> -->
       </div>
     </div>
   </body>
