@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
+    <title>Random Card Generator</title>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
       integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
       crossorigin="anonymous"
     />
-    <link rel="shortcut icon" href="./4geeks.ico" />
+    <link rel="shortcut icon" href="/src/assets/img/FichaRoja_1@300x.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,9 +26,8 @@
   <body>
     <div id="container" class="text-center row">
       <div id="options" class="col-6">
-        <img src="./assets/img/rigo-baby.jpg" alt="">
         <h1 class="mb-5">Random Card</h1>
-        <div>
+        <form>
           <h2 class="text-white mb-5 fs-2">Personaliza Tu Carta</h1>
           <hr />
           <div class="mb-5 d-flex justify-content-between align-items-center">
@@ -36,10 +35,11 @@
               ><i class="bi bi-arrows"></i
             ></label>
             <input
-              type="text"
+              type="number"
               name="width"
               id="input-width"
-              placeholder="Ancho"
+              min="100" 
+              placeholder="Ancho en px"
             />
           </div>
           <div class="mb-5 d-flex justify-content-between align-items-center">
@@ -47,16 +47,21 @@
               <i class="bi bi-arrows-vertical"></i>
             </label>
             <input
-              type="text"
-              name="width"
+              type="number"
+              name="height"
               id="input-height"
-              placeholder="Alto"
+              min="100" 
+              placeholder="Alto en px"
             />
           </div>
-          <button id="btn-newCard" class="mb-2">
+          <button id="btn-submit" class="mb-2" type="submit">
             Generar Carta
           </button>
-        </div>
+          <hr/>
+          <button id="btn-newCard" class="mb-2" type="button">
+            Nueva Carta Aleatoria
+          </button>
+        </form>
       </div>
       <div id="card" class="col-6">
         <!-- <div class="suit">♥</div>

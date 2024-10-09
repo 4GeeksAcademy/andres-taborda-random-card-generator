@@ -35,9 +35,31 @@ const generateCardByClick = () => {
     .addEventListener("click", () => generateRandomCard());
 };
 
+const customizeCard = (cardWidth, cardHeight) => {
+  if (!isNaN(cardWidth) && !isNaN(cardHeight)) {
+    const card = document.querySelector("#card");
+    cardWidth ? (card.style.width = `${cardWidth}px`) : `${card.offsetWidth}px`;
+    cardHeight
+      ? (card.style.height = `${cardHeight}px`)
+      : `${card.offsetHeight}px`;
+  }
+};
+
+const handleSubmit = () => {
+  document.querySelector("form").addEventListener("submit", e => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const cardWidth = Number(formData.get("width"));
+    const cardHeight = Number(formData.get("height"));
+
+    customizeCard(cardWidth, cardHeight);
+  });
+};
+
 window.onload = function() {
   //write your code here
   generateRandomCard();
   generateCardByClick();
-  generateCardByTime();
+  //generateCardByTime();
+  handleSubmit();
 };

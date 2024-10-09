@@ -53,7 +53,7 @@
   align-content: center;
 }
 
-#options > div {
+#options > form {
   display: flex;
   flex-direction: column;
   place-content: center;
@@ -67,7 +67,7 @@
   transition: 0.4s ease-in-out;
 }
 
-#options > div:hover {
+#options > form:hover {
   box-shadow: 5px 5px 10px #0e5934, -5px -5px 10px #127946;
   scale: 0.99;
 }
