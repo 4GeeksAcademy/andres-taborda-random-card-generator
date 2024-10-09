@@ -38,10 +38,17 @@ const generateCardByClick = () => {
 const customizeCard = (cardWidth, cardHeight) => {
   if (!isNaN(cardWidth) && !isNaN(cardHeight)) {
     const card = document.querySelector("#card");
-    cardWidth ? (card.style.width = `${cardWidth}px`) : `${card.offsetWidth}px`;
-    cardHeight
-      ? (card.style.height = `${cardHeight}px`)
-      : `${card.offsetHeight}px`;
+
+    const newCardWidth = cardWidth ? cardWidth : card.offsetWidth;
+    card.style.width = `${newCardWidth}px`;
+
+    const newCardHeight = cardHeight ? cardHeight : card.offsetHeight;
+    card.style.height = `${newCardHeight}px`;
+
+    const fontPercentage = 0.0342;
+    const fontSize = (newCardWidth * newCardHeight * fontPercentage) / 1000;
+
+    card.style.fontSize = fontSize + "px";
   }
 };
 
