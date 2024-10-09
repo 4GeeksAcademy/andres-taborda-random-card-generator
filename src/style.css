@@ -12,9 +12,7 @@
 
 #card {
   width: 30%;
-  max-height: 90vh;
   padding: 1em 2em;
-  aspect-ratio: 2 / 3;
   border-radius: 20px;
   margin: 20px auto;
   font-family: "Card Characters", sans-serif;
@@ -31,24 +29,26 @@
 
 #card div:nth-child(1) {
   align-self: flex-start;
-  line-height: 70px;
+  height: 15%;
+  position: relative;
+  /* line-height: 70px; */
 }
 #card div:nth-child(2) {
   align-self: center;
 }
 #card div:nth-child(3) {
   align-self: flex-end;
-  line-height: 40px;
+  /* line-height: 40px; */
+  height: 15%;
+  position: relative;
 }
 
 .suit {
   font-size: 9em;
-  flex-grow: 1;
 }
 
 .value-card {
   font-size: 15em;
-  flex-grow: 1;
 }
 
 .suitRed {

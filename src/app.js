@@ -12,7 +12,7 @@ const showCard = (randomSuit, randomValue) => {
   card.innerHTML = `
         <div class='${
           randomSuit == "♥" || randomSuit == "♦" ? "suitRed" : ""
-        } suit'>${randomSuit}</div>
+        } suit'><p>${randomSuit}</p></div>
         <div class="value-card">${randomValue}</div>
         <div class='${
           randomSuit == "♥" || randomSuit == "♦" ? "suitRed" : ""
